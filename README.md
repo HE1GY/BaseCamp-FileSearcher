@@ -25,3 +25,7 @@ cd build
 ```MINGW64
 ./FileSearcherApp.exe FILE_NAME_WITH_EXTENSION
 ```
+
+## Warning
+
+**App is sensitive to recursive symbolic links !!!**
