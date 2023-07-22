@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -Wall -Wextra -std=c++17
+CXXFLAGS := -O3 -Wall -Wextra -std=c++17
 
 LIB_NAME := FileSearcherLib.a
 

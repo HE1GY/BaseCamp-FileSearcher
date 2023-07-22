@@ -1,0 +1,27 @@
+# FileSearcher
+
+Search starts from root. (Linux "/", Windows "C:\\")
+
+Build command:
+
+```bash
+make
+```
+
+Run command:
+
+```bash
+cd build
+```
+
+- Linux:
+
+```bash
+./FileSearcherApp FILE_NAME_WITH_EXTENSION
+```
+
+- Windows:
+
+```PowerShell
+FileSearcherApp.exe FILE_NAME_WITH_EXTENSION
+```
