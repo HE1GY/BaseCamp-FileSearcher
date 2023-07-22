@@ -20,8 +20,8 @@ cd build
 ./FileSearcherApp FILE_NAME_WITH_EXTENSION
 ```
 
-- Windows:
+- Windows(MINGW64):
 
-```PowerShell
-FileSearcherApp.exe FILE_NAME_WITH_EXTENSION
+```MINGW64
+./FileSearcherApp.exe FILE_NAME_WITH_EXTENSION
 ```
