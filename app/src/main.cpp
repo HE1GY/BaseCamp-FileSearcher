@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 	constexpr std::size_t thread_count{8ULL};
 	std::wstring path = FileSearcher::SearchFile(file_name, dir, thread_count);
 
-	std::wcout << (path.empty() ? L"Not Founded!" : path) << std::endl;
+	std::wcout << (path.empty() ? L"Not Found!" : path) << std::endl;
 
 	return 0;
 }
