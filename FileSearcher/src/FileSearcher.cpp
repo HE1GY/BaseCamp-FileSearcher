@@ -32,14 +32,14 @@ namespace FileSearcher
 				}
 			}
 		}
-		catch (const std::filesystem::filesystem_error& e)
+		catch (const std::filesystem::filesystem_error& e)//Access is denied to directories
 		{
-			//Access is denied to directories
 		}
 
 		while (!results.empty())
 		{
 			auto has_result = std::find_if(results.begin(), results.end(), [](auto& future) { return future.valid(); });
+			if (has_result == results.end()) continue;
 
 			std::wstring file_path{(*has_result).get()};
 			if (!file_path.empty())
@@ -71,9 +71,8 @@ namespace FileSearcher
 				}
 			}
 		}
-		catch (const std::filesystem::filesystem_error& e)
+		catch (const std::filesystem::filesystem_error& e)//Access is denied to directories
 		{
-			//Access is denied to directories
 		}
 		return {};
 	}
