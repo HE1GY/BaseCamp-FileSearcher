@@ -5,7 +5,7 @@ namespace FileSearcher
 {
 	ThreadPool::ThreadPool(std::size_t thread_count)
 	{
-		for (int i = 0; i < thread_count; ++i)
+		for (std::size_t i = 0ULL; i < thread_count; ++i)
 		{
 			m_threads.emplace_back([=, this] {
 				while (true)

@@ -13,16 +13,16 @@ int main(int argc, char* argv[])
 
 	std::wstringstream wss;
 	wss << argv[1];
-	std::wstring fileName{wss.str()};
+	std::wstring file_name{wss.str()};
 
 #if defined(_WIN32)
-	std::wstring dir{std::filesystem::path("C:\\")};
+	std::wstring dir{std::filesystem::path("C:\\").wstring()};
 #else
-	std::wstring dir{std::filesystem::path("/")};
+	std::wstring dir{std::filesystem::path("/").wstring()};
 #endif
 
 	constexpr std::size_t thread_count{8ULL};
-	std::wstring path = FileSearcher::SearchFile(fileName, dir, thread_count);
+	std::wstring path = FileSearcher::SearchFile(file_name, dir, thread_count);
 
 	std::wcout << (path.empty() ? L"Not Founded!" : path) << std::endl;
 
